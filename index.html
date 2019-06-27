@@ -11,303 +11,296 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link src rel="stylesheet" href="style.css">
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link src rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="collapse bg-danger" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                        <div class="topnav">
-                   
-                        <input type="text" class="search" placeholder="Search.."> 
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow us on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like us on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email Us!</a></li>
-                        </ul>
-                        </div>
-                    </div>
+<header>
+    <div class="collapse bg-danger" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <!--                <div class="topnav">-->
+
+                <div class="col-12 col-sm-6 col-md-8">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow us on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like us on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email Us!</a></li>
+                    </ul>
+                </div>
+                <div style="align-self: center;" class="col-12 col-sm-6 col-md-4">
+                    <input type="text" class="search" placeholder="Search..">
                 </div>
             </div>
+
+            <!--            </div>-->
         </div>
+    </div>
 
 
-
-        
-        <div class="navbar navbar-dark bg-danger shadow-sm">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="mr-2">
-                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
-                        </path>
-                        <circle cx="12" cy="13" r="4"></circle>
-                    </svg>
-                    <strong>Fruitbox</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+    <div class="navbar navbar-dark bg-danger shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="mr-2">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                    </path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <strong>Fruitbox</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Welkom Bij Fruitbox</h1>
+            <p class="lead text-muted">Stel hier uw fruitboxen samen en bestel ze direct.</p>
+            <p>
+                <a href="#" class="btn btn-warning my-2">Bekijk Winkelwagen</a>
+                <a href="#" class="btn btn-warning my-2" class="open-button" onclick="openForm()">Check out </a>
+            </p>
+        </div>
+        <div class="form-popup" id="myForm">
+            <div class="row">
+                <div class="col-75">
+                    <div class="containr">
+                        <form action="/action_page.php">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <h3>Billing Address</h3>
+                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                                    <input type="text" id="city" name="city" placeholder="New York">
+
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="state">State</label>
+                                            <input type="text" id="state" name="state" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="zip">Zip</label>
+                                            <input type="text" id="zip" name="zip" placeholder="10001">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <label>
+                                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as
+                                billing
+                            </label>
+                            <input type="submit" value="Continue to checkout" class="bts">
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                </div>
+
+                </form>
+            </div>
+    </section>
+
+    <div class="card-group">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="box.png" alt="Avatar">
+                <h4><b>Plaats jouw bestelling.</b></h4>
+                <p class="card-text"><strong> Bestel eerst jouw gekozen fruitbox.</strong></p>
+
             </div>
         </div>
-    </header>
-
-    <main role="main">
-
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">Welkom Bij Fruitbox</h1>
-                <p class="lead text-muted">Stel hier uw fruitboxen samen en bestel ze direct.</p>
-                <p>
-                    <a href="#" class="btn btn-warning my-2">Bekijk Winkelwagen</a>
-                    <a href="#"  class="btn btn-warning my-2" class="open-button" onclick="openForm()">Check out </a> 
-                </p>
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="truck.png" alt="Avatar">
+                <h4><b>Je bestelling wordt bezorgd.</b></h4>
+                <p class="card-text"><strong> Nadat je de bestelling geb geplaatst wordt het zo spoedig mogelijk
+                    afgeleverd.</strong></p>
             </div>
-            <div class="form-popup" id="myForm">
-                <div class="row">
-                    <div class="col-75">
-                      <div class="containr">
-                        <form action="/action_page.php">
-                        
-                          <div class="row">
-                            <div class="col-50">
-                              <h3>Billing Address</h3>
-                              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                              <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                              <input type="text" id="email" name="email" placeholder="john@example.com">
-                              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                              <label for="city"><i class="fa fa-institution"></i> City</label>
-                              <input type="text" id="city" name="city" placeholder="New York">
-                  
-                              <div class="row">
-                                <div class="col-50">
-                                  <label for="state">State</label>
-                                  <input type="text" id="state" name="state" placeholder="NY">
-                                </div>
-                                <div class="col-50">
-                                  <label for="zip">Zip</label>
-                                  <input type="text" id="zip" name="zip" placeholder="10001">
-                                </div>
-                              </div>
-                            </div>
-                  
-                            <div class="col-50">
-                              <h3>Payment</h3>
-                              <label for="fname">Accepted Cards</label>
-                              <div class="icon-container">
-                                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                <i class="fa fa-cc-discover" style="color:orange;"></i>
-                              </div>
-                              <label for="cname">Name on Card</label>
-                              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                              <label for="ccnum">Credit card number</label>
-                              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                              <label for="expmonth">Exp Month</label>
-                              <input type="text" id="expmonth" name="expmonth" placeholder="September">
-                              <div class="row">
-                                <div class="col-50">
-                                  <label for="expyear">Exp Year</label>
-                                  <input type="text" id="expyear" name="expyear" placeholder="2018">
-                                </div>
-                                <div class="col-50">
-                                  <label for="cvv">CVV</label>
-                                  <input type="text" id="cvv" name="cvv" placeholder="352">
-                                </div>
-                              </div>
-                            </div>
-                            
-                          </div>
-                          <label>
-                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                          </label>
-                          <input type="submit" value="Continue to checkout" class="bts">
-                          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                        </form>
-                      </div>
-                    </div>
-                 
-                </form>
-              </div>
-        </section>
-  
-        <div class="card-group">
-                <div class="card bg-light">
-                  <div class="card-body text-center">
-                        <img src="box.png" alt="Avatar" >
-                        <h4><b>Plaats jouw bestelling.</b></h4>
-                    <p class="card-text"><strong> Bestel eerst jouw gekozen fruitbox.</strong></p>
-                   
-                  </div>
-                </div>
-                <div class="card bg-light">
-                  <div class="card-body text-center">
-                        <img src="truck.png" alt="Avatar" >
-                        <h4><b>Je bestelling wordt bezorgd.</b></h4> 
-                    <p class="card-text"><strong> Nadat je de bestelling geb geplaatst wordt het zo spoedig mogelijk afgeleverd.</strong></p>
-                  </div>
-                </div>
-                <div class="card bg-light">
-                  <div class="card-body text-center">
-                        <img src="handtruck.png" alt="Avatar" >
-                        <h4><b>Een speciale fruitbox puur vour jou.</b></h4>
-                    <p class="card-text"><strong> Geniet van uw heerlijke fruit!</strong></p>
-                  </div>
-                </div>
-              
-              </div>
+        </div>
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <img src="handtruck.png" alt="Avatar">
+                <h4><b>Een speciale fruitbox puur vour jou.</b></h4>
+                <p class="card-text"><strong> Geniet van uw heerlijke fruit!</strong></p>
             </div>
-                  
-        
+        </div>
+
+    </div>
+    </div>
 
 
-            
-        <div class="album py-5 bg-light">
-            <div class="container">
+    <div class="album py-5 bg-light">
+        <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top"
-                                img src="Fruit_Box_Large1s.png"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="fruit-text">Small fruitbox</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-danger btn-outline-secondary" >Add to cart</button>
-                                       
-                                    </div>
-                                  
-                                    
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top"
+                             img src="Fruit_Box_Large1s.png"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <p class="fruit-text">Small fruitbox</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-danger btn-outline-secondary">Add to
+                                        cart
+                                    </button>
+
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-                  
-                    <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
                         <div class="Rock melon">
                             <img class="card-img-top"
-                                img src="Fruit_Box_Medium111.png"
-                                alt="Card image cap">
+                                 img src="Fruit_Box_Medium111.png"
+                                 alt="Card image cap">
                             <div class="card-body">
                                 <p class="fruit-text"> Medium fruitbox</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-danger btn-outline-secondary" >Add to cart</button>
-                                    </div>
-                                  
-
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                            
-
-
-                        
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top"
-                                img src="Fruit_Box_Large1s.png"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="fruit-text">Large fruitbox</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-danger btn-outline-secondary" >Add to cart</button>
-                                    </div>
-                                   
-                                   
-
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    
-                   
-                      
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top"
-                                img src="Fruit_Box_Custom21 (1).png"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <p class="fruit-text">Fruitbox abbonement.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-danger btn-outline-secondary" >Add to cart</button>
+                                        <button type="button" class="btn btn-sm btn-danger btn-outline-secondary">Add to
+                                            cart
+                                        </button>
                                     </div>
 
-                                    
-                                    
-                                      
-                                   
+
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
 
-                   
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top"
+                             img src="Fruit_Box_Large1s.png"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <p class="fruit-text">Large fruitbox</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-danger btn-outline-secondary">Add to
+                                        cart
+                                    </button>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top"
+                             img src="Fruit_Box_Custom21 (1).png"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <p class="fruit-text">Fruitbox abbonement.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-danger btn-outline-secondary">Add to
+                                        cart
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-        
 
-        <div class="footer">Copyright Timo van Elst || Fruitbox <strong>2019</strong>.</div>
+    <div class="footer">Copyright Timo van Elst || Fruitbox <strong>2019</strong>.</div>
 
 
-        
-    </main>
+</main>
 
-    <footer>
+<footer>
 
-    </footer>
+</footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script>
-        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    <script src="js.js"></script>
+</script>
+<script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/vendor/holder.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="js.js"></script>
 </body>
 
 </html>
